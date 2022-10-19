@@ -10,10 +10,13 @@ h1 {
   text-align: center;
 }
 ul{
-  font-size: 150%;
+  display: flex;
+  font-size: 30px;
   color: black;
   text-align: center;
   list-style-position: inside;
+  border-width: 12px;
+  border-style: double;
 }
 p {
   font-family: "Times New Roman";
@@ -29,10 +32,6 @@ p span{
 }
 img {
   max-width: 70%;
-  border: solid 5px #333333;
-}
-.self-image {
-  max-width:70%;
 }
 .grid{
   display: grid;
@@ -41,8 +40,9 @@ img {
   grid-template-columns: auto auto;
 }
 .grid-item{
+  border-style: double;
+  border-width: 12px;
   background-color: grey;
-  border: 10px;
-  border-color: black;
+
 
 }
