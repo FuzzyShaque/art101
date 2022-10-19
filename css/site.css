@@ -1,10 +1,8 @@
 body{
   background-color: #33475b;
 }
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center
+a:visited{
+  color:#183EE6;
 }
 h1 {
   text-decoration: underline;
@@ -13,17 +11,18 @@ h1 {
 }
 ul{
   font-size: 150%;
-  color: purple;
+  color: black;
   text-align: center;
   list-style-position: inside;
 }
 p {
   font-family: "Times New Roman";
+  font-size: 20px;
   text-indent: 20px;
   margin-left: 10px;
 }
 a:link {
-  color: red;
+  color: black;
 }
 p span{
   background-color: grey;
@@ -33,5 +32,17 @@ img {
   border: solid 5px #333333;
 }
 .self-image {
-  flex-basis: 40%
+  max-width:70%;
+}
+.grid{
+  display: grid;
+  padding: 10px;
+  grid-gap: 10px;
+  grid-template-columns: auto auto;
+}
+.grid-item{
+  background-color: grey;
+  border: 10px;
+  border-color: black;
+
 }
