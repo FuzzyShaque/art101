@@ -17,6 +17,8 @@ console.log(numArray.map(anonFunction));
 console.log(numArray.map(function(x){
     return x ** 0.5;
 }));
+
+//Display output
 var outputEl = document.getElementById("output");
 outputEl.innerHTML = "Original Array: "+ numArray + "</br> Added array: " + numArray.map(anonFunction)+ "</br> Square root array: "+ numArray.map(function(x){
     return x ** 0.5});
