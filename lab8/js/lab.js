@@ -11,6 +11,9 @@ function anonFunction(x) {
     return result;
 }
 //console log results
+setTimeout(() => {
+  console.log(anonFunction(2));
+}, 4000)
 console.log(anonFunction(2));
 console.log(anonFunction(5));
 console.log(numArray.map(anonFunction));
