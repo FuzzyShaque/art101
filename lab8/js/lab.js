@@ -10,6 +10,10 @@ function anonFunction(x) {
     var result = x + 1;
     return result;
 }
+//callback Function
+function callBackPrint(addFunction){
+    console.log(addFunction);
+}
 //console log results
 setTimeout(() => {
   console.log(anonFunction(2));
@@ -20,6 +24,7 @@ console.log(numArray.map(anonFunction));
 console.log(numArray.map(function(x){
     return x ** 0.5;
 }));
+callBackPrint(anonFunction(5));
 
 //Display output
 var outputEl = document.getElementById("output");
