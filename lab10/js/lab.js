@@ -2,19 +2,11 @@
  * Author:    Kaden Sedmak-Locke, Jacob Penland
  * Created:   10/17/2022
  **/
-
-//Variables
-
-// var nameField = document.getElementById("user-name").value;
-// console.log(nameField)
-// var nameButton = document.getElementById("Submit");
-// nameButton.addEventListener('button', () => {
-//     nameInput(nameField);
-// });
-
+//nameInput function
 function nameInput(){
-  //userName input
+  //get the value of the input
   var userName= document.getElementById('user-name').value;
+  //remove spaces in the name
   var userNameTwo= userName.replace(/\s/g, '');
   console.log("userName =", userNameTwo);
   //convert name into array
@@ -28,6 +20,6 @@ function nameInput(){
   //join the array back into a string
   var sortName = sortArray.join('');
   console.log("letterArray =", sortName);
-  //return the sorted name
+  //chage the output into the sorted name
   document.getElementById("output").innerHTML = 'Sorted name is: ' + sortName;
 }
