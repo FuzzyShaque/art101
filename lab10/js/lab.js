@@ -3,8 +3,6 @@
  * Created:   10/17/2022
  **/
 //nameInput function
-var outputEl = document.getElementById("output");
-var new1El= document.createElement("p");
 function nameInput(){
   //get the value of the input
   var userName= document.getElementById('user-name').value;
@@ -22,9 +20,6 @@ function nameInput(){
   //join the array back into a string
   var sortName = sortArray.join('');
   console.log("letterArray =", sortName);
-  new1El.innerHTML=sortName;
   //chage the output into the sorted name
-
-  // document.getElementById("output").innerHTML = 'Sorted name is: ' + sortName;
+  document.getElementById("output").innerHTML = 'Sorted name is: ' + sortName;
 }
-outputEl.appendChild(new1El);
