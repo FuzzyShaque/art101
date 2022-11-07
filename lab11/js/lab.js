@@ -8,6 +8,7 @@ $('#results').append('<button id = "buttonThree">Click Three</button>');
 
 $('#buttonOne').click(function(){
   $('#challenges').toggleClass('special');
+  $('#buttonThree').toggleClass('special3');
 });
 
 $('#buttonTwo').click(function(){
@@ -16,8 +17,5 @@ $('#buttonTwo').click(function(){
 
 $('#buttonThree').click(function(){
   $('#results').toggleClass('special2');
-});
-
-$('#buttonOne').click(function(){
-  $('#buttonThree').toggleClass('special3');
+  $('#buttonOne').toggleClass('special2');
 });
