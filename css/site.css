@@ -10,6 +10,7 @@ h1 {
   text-align: center;
 }
 ul{
+  background-color: grey;
   display: flex;
   font-size: 30px;
   color: black;

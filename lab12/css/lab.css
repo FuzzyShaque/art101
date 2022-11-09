@@ -1,23 +1,16 @@
-/* .script{
-  font-size: 20px;
+body{
+  background-image: url('../img/pot.jpeg');
+
 }
-.special{
-  background-color: red;
-}
-.special1{
-  background-color: green;
-}
-.special2{
-  background-color: purple;
-}
-.special3{
-  background-color: #4CAF50;
-} */
 #output{
   font-size: 40px;
   color: green;
   font-family: "Papyrus";
 }
 #descript{
-  color: red;
+  color: blue;
+  font-size: 30px;
+  border-style: dashed;
+  border-width: 5px;
+  font-family: "Brush Script MT",cursive;
 }
