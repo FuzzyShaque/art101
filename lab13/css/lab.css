@@ -1,8 +1,12 @@
 
 #output{
-  overflow-wrap: break-word;
-  color: green;
+  columns:8;
+  color: pink;
   font-family: "Papyrus";
+}
+#links{
+  text-align: center;
+  font-size: 30px;
 }
 #descript{
   color: blue;
