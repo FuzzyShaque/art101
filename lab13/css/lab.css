@@ -1,0 +1,13 @@
+
+#output{
+  overflow-wrap: break-word;
+  color: green;
+  font-family: "Papyrus";
+}
+#descript{
+  color: blue;
+  font-size: 30px;
+  border-style: dashed;
+  border-width: 5px;
+  font-family: "Brush Script MT",cursive;
+}
