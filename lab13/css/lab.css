@@ -4,6 +4,10 @@
   color: pink;
   font-family: "Papyrus";
 }
+body{
+  background-image: url('../img/fizz.jpg');
+
+}
 #links{
   text-align: center;
   font-size: 30px;
