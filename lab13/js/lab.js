@@ -2,31 +2,31 @@
 //  * Author:    Kaden Sedmak-Locke, Jacob Penland
 //  * Created:   10/17/2022
 var finalstring=''
-var factor1 = 3;
-var factor2 = 4;
-var factor3 = 5;
-var factor4 = 7;
-for (let i = 1; i <= 200; i++) {
-  var outstring='';
-  if(i%factor1==0){
-    outstring+='Fizz';
-  }
-  if(i%factor2==0){
-      outstring+='Buzz';
+function fizzBuzz(max, numInput, txtInput) {
+  for (var num = 1; num <= max; num++) {
+    var outstring='';
+    for (var input in txtInput){
+      if (num % numInput[input] == 0) {
+        outstring += txtInput[input];
+      }
     }
-  if(i%factor3==0){
-    outstring+='Boom';
-  }
-  if(i%factor4==0){
-    outstring+='Bang!';
-  }
-  if (outstring.length>0){
-      console.log(i+ '-'+outstring);
-      finalstring+=i+'-'+outstring+"!</br>";
-  }
-  else{
-    console.log(i);
-    finalstring+=i+"</br>";
-  }
+    if (outstring.length>0){
+        console.log(num+ '-'+outstring);
+        finalstring+=num+'-'+outstring+"!</br>";
+    }
+    else{
+      console.log(num);
+      finalstring+=num+"</br>";
+    }
 }
-$('#output').html(finalstring);
+}
+
+$('#button').click(function() {
+
+  var numArr=[$('#num0').val(),$('#num1').val(),$('#num2').val(),$('#num3').val()];
+
+  var inputArr=[$('#input1').val(),$('#input2').val(),$('#input3').val(),$('#input4').val()];
+
+  fizzBuzz($('#input0').val(),numArr, inputArr);
+  $('#output').html(finalstring);
+});
