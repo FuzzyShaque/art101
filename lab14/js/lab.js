@@ -14,17 +14,19 @@ function fizzBuzz(max, numInput, txtInput) {
     //for loop that iterates through each position of the matching arrays
     for (var input in txtInput){
       if (num % numInput[input] == 0) {
+        console.log("Debugger test one");//Prexisting debugging console.log statement we used while debugging lab 13
+        debugger;//debugger stop statement
         outstring += txtInput[input];
       }
     }
     //conditional for checking if there is a factor in the first place and appending the combination
     if (outstring.length>0){
-        console.log(num+ '-'+outstring);
+        console.log(num+ '-'+outstring); //Testing to see if the outputted string/number combo is correct printing it each time
         finalstring+=num+'-'+outstring+"!</br>";
     }
     //otherwise just output the raw number
     else{
-      console.log(num);
+      console.log(num);//Testing to see if the outputted string/number combo is correct printing it each time
       finalstring+=num+"</br>";
     }
 }
