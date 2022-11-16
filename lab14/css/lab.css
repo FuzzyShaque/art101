@@ -1,0 +1,21 @@
+
+#output{
+  columns:8;
+  color: pink;
+  font-family: "Papyrus";
+}
+body{
+  background-image: url('../img/fizz.jpg');
+
+}
+#links{
+  text-align: center;
+  font-size: 30px;
+}
+#descript{
+  color: blue;
+  font-size: 30px;
+  border-style: dashed;
+  border-width: 5px;
+  font-family: "Brush Script MT",cursive;
+}
