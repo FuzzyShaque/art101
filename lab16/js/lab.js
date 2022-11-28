@@ -23,7 +23,8 @@ function ajaxCall() {
                     var comicObj = data;
                     var imgsrc= comicObj['img'];
                     var imgalt= comicObj['alt'];
-                    $('#output').append("<h1 id = title1/> <img class = comicimage img src="+imgsrc +">");
+                    $('#output').append("<h2 id = title1/>");
+                    $('#output').append("<img id = comicImage img src="+imgsrc +">");
                     $('#title1').append(comicObj['title']);
                 },
 
@@ -69,10 +70,7 @@ function ajaxCall() {
 
           }
 
-        $('#activate').click(function() {
-            ajaxCall();
-
-          });
+        ajaxCall();
 
         $('#change').click(function() {
             ajaxCall();
