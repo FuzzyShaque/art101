@@ -29,12 +29,9 @@ function ajaxCall() {
             });
 
         }
-        $('#activate').click(function() {
-            ajaxCall();
-
-          });
 
 
+        // 
         // function ajaxCallNASA() {
         //             $.ajax({
         //
@@ -50,7 +47,7 @@ function ajaxCall() {
         //                     },
         //                 dataType: 'jsonp',
         //                 headers: {
-        //                   'Authorization': '69B16Gfrt49rFCJOWDilQpYq6evXwBYkv7hUuaYb',
+        //                   'Authorization': '69B16Gfrt49rFCJOWDilQpYq6evXwBYkv7hUuaYb'
         //                 },
         //
         //                 // Function to call when to
@@ -68,3 +65,7 @@ function ajaxCall() {
         //             });
         //
         //         }
+                $('#activate').click(function() {
+                    ajaxCallNASA();
+
+                  });

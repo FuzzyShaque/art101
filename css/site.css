@@ -41,9 +41,9 @@ p span{
   grid-gap: 10px;
   grid-template-columns: auto auto;
 }
-.comicGrid{
-  text-align: center;
+.grid-item{
   border-style: double;
   border-width: 12px;
   background-color: grey;
+  text-align:center;
 }
