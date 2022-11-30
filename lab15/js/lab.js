@@ -31,7 +31,7 @@ function ajaxCall() {
         }
 
 
-        // 
+        //
         // function ajaxCallNASA() {
         //             $.ajax({
         //
@@ -66,6 +66,6 @@ function ajaxCall() {
         //
         //         }
                 $('#activate').click(function() {
-                    ajaxCallNASA();
+                    ajaxCall();
 
                   });
