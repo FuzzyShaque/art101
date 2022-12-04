@@ -1,40 +1,8 @@
 // /**
 //  * Author:    Kaden Sedmak-Locke, Jacob Penland
-//  * Created:   11/21/2022
+//  * Created:   11/28/2022
 
 // Using the core $.ajax() method
-function ajaxCall() {
-            $.ajax({
-
-                // Our sample url to make request
-                url:
-                    'https://xkcd.com/614/info.0.json',
-
-                // Type of Request
-                type: "GET",
-
-                dataType : "json",
-                // Function to call when to
-                // request is ok
-                success: function (data) {
-                  // for (y in data['pokemon_entries']){
-                  //   $('#output').append("The name of the Pokemon in entry "+ (parseInt(y)+1)+ " of the Kanto Dex is " + data['pokemon_entries'][y]['pokemon_species']['name'] + "<br>"+"<br>");
-                  // }
-                    var comicObj = data;
-                    var imgsrc= comicObj['img'];
-                    var imgalt= comicObj['alt'];
-                    $('#output').append("<h2 id = title1/>");
-                    $('#output').append("<img id = comicImage img src="+imgsrc +">");
-                    $('#title1').append(comicObj['title']);
-                },
-
-                // Error handling
-                error: function (error) {
-                    console.log(`Error ${error}`);
-                }
-            });
-
-        }
 function comicSwap(){
   var maxComic;
   //Find the maximum comic url you can go to
@@ -48,12 +16,9 @@ function comicSwap(){
       type: "GET",
       async: false,
       dataType : "json",
-      // Function to call when to
+
       // request is ok
       success: function (data) {
-        // for (y in data['pokemon_entries']){
-        //   $('#output').append("The name of the Pokemon in entry "+ (parseInt(y)+1)+ " of the Kanto Dex is " + data['pokemon_entries'][y]['pokemon_species']['name'] + "<br>"+"<br>");
-        // }
           var comicObj = data;
           maxComic= comicObj['num'];
       },
@@ -64,7 +29,7 @@ function comicSwap(){
       }
   });
 
-  //Default comic display call
+  //Default comic display call that also gets the current comic
   var current;
   $.ajax({
 
@@ -76,13 +41,8 @@ function comicSwap(){
       type: "GET",
       async: false,
       dataType : "json",
-      // Function to call when to
       // request is ok
       success: function (data) {
-        // for (y in data['pokemon_entries']){
-        //   $('#output').append("The name of the Pokemon in entry "+ (parseInt(y)+1)+ " of the Kanto Dex is " + data['pokemon_entries'][y]['pokemon_species']['name'] + "<br>"+"<br>");
-        // }
-
           var comicObj = data;
           current= comicObj['num'];
           var imgsrc= comicObj['img'];
@@ -100,7 +60,7 @@ function comicSwap(){
   });
   return [current,maxComic];
 }
-
+//function to change the output html to the next comic using the current one depending on button press
 function changeComic(currentComic){
   $.ajax({
 
@@ -112,13 +72,8 @@ function changeComic(currentComic){
       type: "GET",
       async: false,
       dataType : "json",
-      // Function to call when to
       // request is ok
       success: function (data) {
-        // for (y in data['pokemon_entries']){
-        //   $('#output').append("The name of the Pokemon in entry "+ (parseInt(y)+1)+ " of the Kanto Dex is " + data['pokemon_entries'][y]['pokemon_species']['name'] + "<br>"+"<br>");
-        // }
-
           var comicObj = data;
           current= comicObj['num'];
           var imgsrc= comicObj['img'];
@@ -135,19 +90,18 @@ function changeComic(currentComic){
 
   });
 }
-        var comic= comicSwap();
-        console.log(comic[0]);
-
-        $('#last').click(function() {
+//setting the default value of the comic to display as well as getting it's id for button use
+var comic= comicSwap();
+//function for the last comic, takes current and subtracts one, then does an API call
+$('#last').click(function() {
             if(comic[0] != 0){
               comic[0] -= 1;
               changeComic(comic[0]);
             }
 
-
-
           });
-        $('#next').click(function() {
+//function for the next comic, takes current and subtracts one, then does an API call
+$('#next').click(function() {
             if (!(comic[0] > comic[1])) {
               comic[0] += 1;
               changeComic(comic[0]);
